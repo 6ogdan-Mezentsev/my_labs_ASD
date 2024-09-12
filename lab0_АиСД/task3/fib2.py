@@ -1,5 +1,5 @@
 def fib2():
-    with open('/Users/6ogdanmezentsev/PycharmProjects/ITMO_project/lab0_АиСД/task3/input.txt', 'r') as file:
+    with open('/Users/6ogdanmezentsev/PycharmProjects/ITMO_project/my_labs_ASD/lab0_АиСД/task3/input.txt', 'r') as file:
         n = int(file.readline())
         file.close()
 
@@ -7,7 +7,7 @@ def fib2():
     for i in range(n):
         a, b = b, a + b
 
-    with open('/Users/6ogdanmezentsev/PycharmProjects/ITMO_project/lab0_АиСД/task3/output.txt', 'w') as file:
+    with open('/Users/6ogdanmezentsev/PycharmProjects/ITMO_project/my_labs_ASD/lab0_АиСД/task3/output.txt', 'w') as file:
         file.write(str(a % 10))
         file.close()
 
