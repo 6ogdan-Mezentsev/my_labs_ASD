@@ -1,5 +1,5 @@
 def fib2():
-    with open('/my_labs_ASD/lab0_АиСД/task3/input2.txt', 'r') as file:
+    with open('/my_labs_ASD/lab0_ASD/task3/input2.txt', 'r') as file:
         n = int(file.readline())
         file.close()
     if 0 <= n <= 45:
@@ -7,7 +7,7 @@ def fib2():
         for i in range(n):
             a, b = b, a + b
 
-        with open('/my_labs_ASD/lab0_АиСД/task3/output2.txt', 'w') as file:
+        with open('/my_labs_ASD/lab0_ASD/task3/output2.txt', 'w') as file:
             file.write(str(a % 10))
             file.close()
     else:

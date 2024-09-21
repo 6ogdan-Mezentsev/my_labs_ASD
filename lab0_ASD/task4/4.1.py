@@ -1,6 +1,6 @@
 import time
-from lab0_АиСД.task2.fib1 import fib1
-from lab0_АиСД.task3.fib2 import fib2
+from lab0_ASD.task2.fib1 import fib1
+from lab0_ASD.task3.fib2 import fib2
 
 start_time = time.time()
 fib1()
