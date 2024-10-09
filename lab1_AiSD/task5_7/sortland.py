@@ -1,5 +1,12 @@
 import tracemalloc
 import time
+import random
+
+random_numbers = [random.uniform(0, 1000000) for _ in range(3, 10000)]
+lines = [f'{len(random_numbers)}\n', ' '.join(map(str, random_numbers))]
+file = open('input.txt', 'w')
+file.writelines(lines)
+
 tracemalloc.start()
 t1 = time.time()
 
@@ -13,12 +20,7 @@ if (3 <= n <= 9999) and (n % 2 != 0):
         print("Элементы массива M не должны превышать значение 10**6!")
     else:
         M = M2
-        for i in range(1, len(M2)):
-            for j in range(i, 0, -1):
-                if M2[j] < M2[j - 1]:
-                    M2[j], M2[j - 1] = M2[j - 1], M2[j]
-                else:
-                    break
+        M2 = sorted(M2)
         minimum = min(M)
         medium = M[n // 2]
         maximum = max(M)

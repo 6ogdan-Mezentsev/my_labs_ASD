@@ -1,11 +1,19 @@
 import tracemalloc
 import time
+import random
+
+random_numbers = [random.randint(0, 1000) for _ in range(1000)]
+random_element = str(random_numbers[random.randint(0, 999)])
+lines = [f'{random_element}\n', ' '.join(map(str, random_numbers))]
+file = open('input.txt', 'w')
+file.writelines(lines)
+
 tracemalloc.start()
 t1 = time.time()
 
 file = open('input.txt', 'r')
-A = list(map(int, file.readline().split()))
 V = int(file.readline())
+A = list(map(int, file.readline().split()))
 index = []  # список для подсчета индексов, если элемент встречается несколько раз
 print(A)
 print(V)

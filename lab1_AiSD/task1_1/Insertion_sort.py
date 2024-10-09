@@ -1,5 +1,12 @@
 import tracemalloc
 import time
+import random
+
+random_numbers = [random.randint(0, 1000000000) for _ in range(1000)]
+lines = [f'{len(random_numbers)}\n', ' '.join(map(str, random_numbers))]
+file = open('input.txt', 'w')
+file.writelines(lines)
+
 tracemalloc.start()
 t1 = time.time()
 
