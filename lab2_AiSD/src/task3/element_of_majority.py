@@ -1,7 +1,6 @@
 # Задача 5
 def element_of_majority(A):
     A.sort()
-    print(A)
     element = A[len(A) // 2]  # в отсортированном массиве элемент большинства будет стоять по середине!
     count = A.count(element)
     if count > len(A) // 2:
