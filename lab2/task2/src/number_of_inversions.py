@@ -35,13 +35,13 @@ def merge_sort_and_count(A, n):
 
 
 if __name__ == "__main__":
-    file = open('input.txt', 'r')
+    file = open('../txtf/input.txt', 'r')
     n = int(file.readline())
     A = list(map(int, file.readline().split()))
     if (1 <= n <= 10**5) and all(abs(x) <= 10**9 for x in A):
-        outfile = open('output.txt', 'w').write(str(merge_sort_and_count(A, n)))
+        outfile = open('../txtf/output.txt', 'w').write(str(merge_sort_and_count(A, n)))
     else:
-        outfile = open('output.txt', 'w').write("Проверьте корректность введённых данных")
+        outfile = open('../txtf/output.txt', 'w').write("Проверьте корректность введённых данных")
 
 
 

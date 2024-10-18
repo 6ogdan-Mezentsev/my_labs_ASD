@@ -3,9 +3,9 @@ import random
 import time
 import psutil
 import os
-from lab2_AiSD.src.task1.merge_sort import merge_sort
-from lab2_AiSD.src.task2.number_of_inversions import merge_sort_and_count
-from lab2_AiSD.src.task3.element_of_majority import element_of_majority
+from lab2.task1.src.merge_sort import merge_sort
+from lab2.task2.src.number_of_inversions import merge_sort_and_count
+from lab2.task3.src.element_of_majority import element_of_majority
 
 
 def get_memory_usage():
