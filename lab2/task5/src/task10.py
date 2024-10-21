@@ -1,4 +1,3 @@
-# Задание 1
 def merge_sort(A, n):
     if len(A) > 1:
         mid = len(A) // 2
@@ -10,8 +9,13 @@ def merge_sort(A, n):
         # i - индекс в списке left
         # j - индекс в списке right
         # k - индекс в исходном списке A
+
+        # Проверка, нужно ли объединять массивы в том случае, если массивы отсортированы!
+        if left[-1] <= right[0]:
+            A[:] = left + right
+
         i = j = k = 0
-        while i < len(left) and j < len(right): # рекурсивно сравниваем элементы отсортированных массивов и добаляем их в исходныый массив А
+        while i < len(left) and j < len(right):
             if left[i] < right[j]:
                 A[k] = left[i]
                 i += 1
@@ -20,14 +24,14 @@ def merge_sort(A, n):
                 j += 1
             k += 1
 
-        while j < len(right): # если в правом массиве остались элементы, а в левом нет
-            A[k] = right[j]
-            j += 1
-            k += 1
-
-        while i < len(left): # если в левом массиве остались элементы, а в правом нет
+        while i < len(left):
             A[k] = left[i]
             i += 1
+            k += 1
+
+        while j < len(right):
+            A[k] = right[j]
+            j += 1
             k += 1
 
         return A
@@ -44,13 +48,4 @@ if __name__ == "__main__":
         outfile = open('../txtf/output.txt', 'w').write(result)
     else:
         outfile = open('../txtf/output.txt', 'w').write("Проверьте корректность введённых данных")
-
-
-
-
-
-
-
-
-
 
